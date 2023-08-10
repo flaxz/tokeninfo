@@ -30,7 +30,7 @@ def main():
   liquid = round(float(tokenInfo["circulatingSupply"]) - float(tokenInfo["totalStaked"]), decNum)
   print("$"+token+" token liquid: ",liquid)
   
-  # Token holders
+  # Token stake holders
   holders = api.find_all("tokens", "balances", query = {"symbol": token})
   
   df = pd.DataFrame(holders)
